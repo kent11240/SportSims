@@ -18,7 +18,7 @@ public class RDBLotteriesDAO implements DAOInterface<Integer, Lottery> {
     private static final String TABLE = "lotteries";
 
     private static final String INSERT_SQL_AUTO_ID = "INSERT INTO " + TABLE
-            + " (memberId,dateTime,selections,game1Id,game1Item,game1Spread,game1Odds,game2Id,game2Item,game2Spread,game2Odds,"
+            + " (memberId,`dateTime`,selections,game1Id,game1Item,game1Spread,game1Odds,game2Id,game2Item,game2Spread,game2Odds,"
             + "game3Id,game3Item,game3Spread,game3Odds,game4Id,game4Item,game4Spread,game4Odds,game5Id,game5Item,game5Spread,game5Odds,"
             + "game6Id,game6Item,game6Spread,game6Odds,game7Id,game7Item,game7Spread,game7Odds,game8Id,game8Item,game8Spread,game8Odds,"
             + "pass1,pass2,pass3,pass4,pass5,pass6,pass7,pass8,stake,price,status)"
@@ -27,13 +27,13 @@ public class RDBLotteriesDAO implements DAOInterface<Integer, Lottery> {
     private static final String UPDATE_SQL = "UPDATE " + TABLE
             + " SET price=?,status=? WHERE lotteryId=?";
 
-    private static final String SELECT_ALL_SQL = "SELECT lotteryId,memberId,dateTime,selections,game1Id,game1Item,game1Spread,game1Odds,"
+    private static final String SELECT_ALL_SQL = "SELECT lotteryId,memberId,`dateTime`,selections,game1Id,game1Item,game1Spread,game1Odds,"
             + "game2Id,game2Item,game2Spread,game2Odds,game3Id,game3Item,game3Spread,game3Odds,game4Id,game4Item,game4Spread,game4Odds,"
             + "game5Id,game5Item,game5Spread,game5Odds,game6Id,game6Item,game6Spread,game6Odds,game7Id,game7Item,game7Spread,game7Odds,"
             + "game8Id,game8Item,game8Spread,game8Odds,pass1,pass2,pass3,pass4,pass5,pass6,pass7,pass8,stake,price,status"
             + " FROM " + TABLE;
 
-    private static final String SELECT_ALL_BY_MEMBER_SQL = SELECT_ALL_SQL + " WHERE memberId=? ORDER BY dateTime DESC";
+    private static final String SELECT_ALL_BY_MEMBER_SQL = SELECT_ALL_SQL + " WHERE memberId=? ORDER BY `dateTime` DESC";
     private static final String SELECT_BY_KEY_SQL = SELECT_ALL_SQL + " WHERE lotteryId=? AND memberId=?";
 
     @Override

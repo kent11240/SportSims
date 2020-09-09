@@ -17,24 +17,24 @@ public class RDBBasketballsDAO implements DAOInterface<Integer, Basketball> {
     private static final String TABLE = "basketballs";
 
     private static final String INSERT_SQL_AUTO_ID = "INSERT INTO " + TABLE
-            + " (dateTime,awayName,homeName,pointSpread,total,away,home,over,under,awayPk,homePk,awayQ1,drawQ1,homeQ1,odd,even,"
+            + " (`dateTime`,awayName,homeName,pointSpread,total,away,home,`over`,`under`,awayPk,homePk,awayQ1,drawQ1,homeQ1,odd,even,"
             + "away1to5,away6to10,away11to15,away16to20,away21to25,away26,home1to5,home6to10,home11to15,home16to20,home21to25,home26,"
             + "awayResult,homeResult,awayQ1Result,homeQ1Result,status)"
             + " VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
     private static final String INSERT_SQL = "INSERT INTO " + TABLE
-            + " (dateTime,awayName,homeName,pointSpread,total,away,home,over,under,awayPk,homePk,awayQ1,drawQ1,homeQ1,odd,even,"
+            + " (`dateTime`,awayName,homeName,pointSpread,total,away,home,`over`,`under`,awayPk,homePk,awayQ1,drawQ1,homeQ1,odd,even,"
             + "away1to5,away6to10,away11to15,away16to20,away21to25,away26,home1to5,home6to10,home11to15,home16to20,home21to25,home26,"
             + "awayResult,homeResult,awayQ1Result,homeQ1Result,status,gameId)"
             + " VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
     private static final String UPDATE_SQL = "UPDATE " + TABLE
-            + " SET dateTime=?,awayName=?,homeName=?,pointSpread=?,total=?,away=?,home=?,over=?,under=?,awayPk=?,homePk=?,awayQ1=?,drawQ1=?,homeQ1=?,odd=?,even=?,"
+            + " SET `dateTime`=?,awayName=?,homeName=?,pointSpread=?,total=?,away=?,home=?,`over`=?,`under`=?,awayPk=?,homePk=?,awayQ1=?,drawQ1=?,homeQ1=?,odd=?,even=?,"
             + "away1to5=?,away6to10=?,away11to15=?,away16to20=?,away21to25=?,away26=?,home1to5=?,home6to10=?,home11to15=?,home16to20=?,home21to25=?,home26=?,"
             + "awayResult=?,homeResult=?,awayQ1Result=?,homeQ1Result=?,status=?"
             + " WHERE gameId=?";
 
-    private static final String SELECT_ALL_SQL = "SELECT gameId,dateTime,awayName,homeName,pointSpread,total,away,home,over,under,awayPk,homePk,awayQ1,drawQ1,homeQ1,odd,even,"
+    private static final String SELECT_ALL_SQL = "SELECT gameId,`dateTime`,awayName,homeName,pointSpread,total,away,home,`over`,`under`,awayPk,homePk,awayQ1,drawQ1,homeQ1,odd,even,"
             + "away1to5,away6to10,away11to15,away16to20,away21to25,away26,home1to5,home6to10,home11to15,home16to20,home21to25,home26,"
             + "awayResult,homeResult,awayQ1Result,homeQ1Result,status"
             + " FROM " + TABLE;

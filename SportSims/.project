@@ -3,6 +3,7 @@
 	<name>SportSims</name>
 	<comment></comment>
 	<projects>
+		<project>SportSimsLibrary</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

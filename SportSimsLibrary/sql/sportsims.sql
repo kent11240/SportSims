@@ -1,3 +1,8 @@
+DROP DATABASE sportsims;
+
+CREATE DATABASE sportsims;
+USE sportsims;
+
 CREATE TABLE `sportsims`.`members` (
   `id` VARCHAR(50) NOT NULL,
   `password` VARCHAR(20) NOT NULL,
@@ -5,7 +10,7 @@ CREATE TABLE `sportsims`.`members` (
   `email` VARCHAR(50) NOT NULL,
   `birthday` DATE NOT NULL,
   `money` INTEGER UNSIGNED NOT NULL,
-  `state` INTEGER UNSIGNED NOT NULL,
+  `status` INTEGER UNSIGNED NOT NULL,
   PRIMARY KEY (`id`)
 )
 ENGINE = InnoDB;
@@ -49,33 +54,13 @@ CREATE TABLE `sportsims`.`basketballs` (
 )
 ENGINE = InnoDB;
 
-INSERT INTO basketballs (dateTime,awayName,homeName,pointSpread,total,away,home,over,under,awayPk,homePk,awayQ1,drawQ1,homeQ1,odd,even,
-away1to5,away6to10,away11to15,away16to20,away21to25,away26,home1to5,home6to10,home11to15,home16to20,home21to25,home26,awayResult,homeResult,
-awayQ1Result,homeQ1Result,status) VALUES("2016-04-01 07:00:00","布魯克林籃網","克里夫蘭騎士",-14.5,211.5,1.75,1.75,1.75,1.75,1,1,2.65,15,1.25,1.75,1.75,10,18,30,30,30,30,6.25,4.75,4.25,4.5,5.25,3.1,0,0,0,0,0);
-
-INSERT INTO basketballs (dateTime,awayName,homeName,pointSpread,total,away,home,over,under,awayPk,homePk,awayQ1,drawQ1,homeQ1,odd,even,
-away1to5,away6to10,away11to15,away16to20,away21to25,away26,home1to5,home6to10,home11to15,home16to20,home21to25,home26,awayResult,homeResult,
-awayQ1Result,homeQ1Result,status) VALUES("2016-04-01 08:00:00","丹佛金塊","紐奧良鵜鶘",6.5,210.5,1.75,1.75,1.75,1.75,1.25,2.85,1.5,14,2,1.75,1.75,4.25,4.25,4.75,6,9,8.25,5.5,7.5,12.5,22,30,30,0,0,0,0,0);
-
-INSERT INTO basketballs (dateTime,awayName,homeName,pointSpread,total,away,home,over,under,awayPk,homePk,awayQ1,drawQ1,homeQ1,odd,even,
-away1to5,away6to10,away11to15,away16to20,away21to25,away26,home1to5,home6to10,home11to15,home16to20,home21to25,home26,awayResult,homeResult,
-awayQ1Result,homeQ1Result,status) VALUES("2016-04-01 10:00:00","波士頓塞爾提克","波特蘭拓荒者",-2.5,214.5,1.75,1.75,1.75,1.75,2.05,1.5,1.8,13,1.6,1.75,1.75,4.25,5.5,8.5,15,30,30,4,4.25,5.5,8.5,15,20,0,0,0,0,0);
-
-INSERT INTO basketballs (dateTime,awayName,homeName,pointSpread,total,away,home,over,under,awayPk,homePk,awayQ1,drawQ1,homeQ1,odd,even,
-away1to5,away6to10,away11to15,away16to20,away21to25,away26,home1to5,home6to10,home11to15,home16to20,home21to25,home26,awayResult,homeResult,
-awayQ1Result,homeQ1Result,status) VALUES("2016-04-09 07:00:00","布魯克林籃網","夏洛特黃蜂",-15.5,204.5,1.75,1.75,1.75,1.75,1,1,2.8,15,1.22,1.75,1.75,11.5,20,25,30,30,30,6.5,5,4.25,4.25,5,2.85,0,0,0,0,0);
-
-INSERT INTO basketballs (dateTime,awayName,homeName,pointSpread,total,away,home,over,under,awayPk,homePk,awayQ1,drawQ1,homeQ1,odd,even,
-away1to5,away6to10,away11to15,away16to20,away21to25,away26,home1to5,home6to10,home11to15,home16to20,home21to25,home26,awayResult,homeResult,
-awayQ1Result,homeQ1Result,status) VALUES("2016-04-09 07:00:00","紐約尼克","費城76人",2.5,201.5,1.75,1.75,1.75,1.75,1.5,2.05,1.6,13,1.8,1.75,1.75,3.75,4.25,5.5,8.5,16,22,4.25,5.5,8.5,16,25,30,0,0,0,0,0);
-
-INSERT INTO basketballs (dateTime,awayName,homeName,pointSpread,total,away,home,over,under,awayPk,homePk,awayQ1,drawQ1,homeQ1,odd,even,
-away1to5,away6to10,away11to15,away16to20,away21to25,away26,home1to5,home6to10,home11to15,home16to20,home21to25,home26,awayResult,homeResult,
-awayQ1Result,homeQ1Result,status) VALUES("2016-04-09 08:00:00","洛杉磯湖人","紐奧良鵜鶘",-1.5,202.5,1.75,1.75,1.75,1.75,1.9,1.6,1.75,13,1.65,1.75,1.75,4,5.25,7.75,14,28,30,3.75,4.25,6,9.5,18,28,0,0,0,0,0);
-
-INSERT INTO basketballs (dateTime,awayName,homeName,pointSpread,total,away,home,over,under,awayPk,homePk,awayQ1,drawQ1,homeQ1,odd,even,
-away1to5,away6to10,away11to15,away16to20,away21to25,away26,home1to5,home6to10,home11to15,home16to20,home21to25,home26,awayResult,homeResult,
-awayQ1Result,homeQ1Result,status) VALUES("2016-04-09 08:30:00","曼斐斯灰熊","達拉斯小牛",-6.5,194.5,1.75,1.75,1.75,1.75,2.85,1.25,2,13,1.45,1.75,1.75,5.25,7.75,13,25,28,30,4.25,4,4.5,6,9.25,9.25,0,0,0,0,0);
+INSERT INTO basketballs (`dateTime`,awayName,homeName,pointSpread,total,away,home,`over`,`under`,awayPk,homePk,awayQ1,drawQ1,homeQ1,odd,even,away1to5,away6to10,away11to15,away16to20,away21to25,away26,home1to5,home6to10,home11to15,home16to20,home21to25,home26,awayResult,homeResult,awayQ1Result,homeQ1Result,status) VALUES("2020-09-10 07:00:00","布魯克林籃網","克里夫蘭騎士",-14.5,211.5,1.75,1.75,1.75,1.75,1,1,2.65,15,1.25,1.75,1.75,10,18,30,30,30,30,6.25,4.75,4.25,4.5,5.25,3.1,0,0,0,0,0);
+INSERT INTO basketballs (`dateTime`,awayName,homeName,pointSpread,total,away,home,`over`,`under`,awayPk,homePk,awayQ1,drawQ1,homeQ1,odd,even,away1to5,away6to10,away11to15,away16to20,away21to25,away26,home1to5,home6to10,home11to15,home16to20,home21to25,home26,awayResult,homeResult,awayQ1Result,homeQ1Result,status) VALUES("2020-09-10 08:00:00","丹佛金塊","紐奧良鵜鶘",6.5,210.5,1.75,1.75,1.75,1.75,1.25,2.85,1.5,14,2,1.75,1.75,4.25,4.25,4.75,6,9,8.25,5.5,7.5,12.5,22,30,30,0,0,0,0,0);
+INSERT INTO basketballs (`dateTime`,awayName,homeName,pointSpread,total,away,home,`over`,`under`,awayPk,homePk,awayQ1,drawQ1,homeQ1,odd,even,away1to5,away6to10,away11to15,away16to20,away21to25,away26,home1to5,home6to10,home11to15,home16to20,home21to25,home26,awayResult,homeResult,awayQ1Result,homeQ1Result,status) VALUES("2020-09-10 10:00:00","波士頓塞爾提克","波特蘭拓荒者",-2.5,214.5,1.75,1.75,1.75,1.75,2.05,1.5,1.8,13,1.6,1.75,1.75,4.25,5.5,8.5,15,30,30,4,4.25,5.5,8.5,15,20,0,0,0,0,0);
+INSERT INTO basketballs (`dateTime`,awayName,homeName,pointSpread,total,away,home,`over`,`under`,awayPk,homePk,awayQ1,drawQ1,homeQ1,odd,even,away1to5,away6to10,away11to15,away16to20,away21to25,away26,home1to5,home6to10,home11to15,home16to20,home21to25,home26,awayResult,homeResult,awayQ1Result,homeQ1Result,status) VALUES("2020-09-10 07:00:00","布魯克林籃網","夏洛特黃蜂",-15.5,204.5,1.75,1.75,1.75,1.75,1,1,2.8,15,1.22,1.75,1.75,11.5,20,25,30,30,30,6.5,5,4.25,4.25,5,2.85,0,0,0,0,0);
+INSERT INTO basketballs (`dateTime`,awayName,homeName,pointSpread,total,away,home,`over`,`under`,awayPk,homePk,awayQ1,drawQ1,homeQ1,odd,even,away1to5,away6to10,away11to15,away16to20,away21to25,away26,home1to5,home6to10,home11to15,home16to20,home21to25,home26,awayResult,homeResult,awayQ1Result,homeQ1Result,status) VALUES("2020-09-10 07:00:00","紐約尼克","費城76人",2.5,201.5,1.75,1.75,1.75,1.75,1.5,2.05,1.6,13,1.8,1.75,1.75,3.75,4.25,5.5,8.5,16,22,4.25,5.5,8.5,16,25,30,0,0,0,0,0);
+INSERT INTO basketballs (`dateTime`,awayName,homeName,pointSpread,total,away,home,`over`,`under`,awayPk,homePk,awayQ1,drawQ1,homeQ1,odd,even,away1to5,away6to10,away11to15,away16to20,away21to25,away26,home1to5,home6to10,home11to15,home16to20,home21to25,home26,awayResult,homeResult,awayQ1Result,homeQ1Result,status) VALUES("2020-09-10 08:00:00","洛杉磯湖人","紐奧良鵜鶘",-1.5,202.5,1.75,1.75,1.75,1.75,1.9,1.6,1.75,13,1.65,1.75,1.75,4,5.25,7.75,14,28,30,3.75,4.25,6,9.5,18,28,0,0,0,0,0);
+INSERT INTO basketballs (`dateTime`,awayName,homeName,pointSpread,total,away,home,`over`,`under`,awayPk,homePk,awayQ1,drawQ1,homeQ1,odd,even,away1to5,away6to10,away11to15,away16to20,away21to25,away26,home1to5,home6to10,home11to15,home16to20,home21to25,home26,awayResult,homeResult,awayQ1Result,homeQ1Result,status) VALUES("2020-09-10 08:30:00","曼斐斯灰熊","達拉斯小牛",-6.5,194.5,1.75,1.75,1.75,1.75,2.85,1.25,2,13,1.45,1.75,1.75,5.25,7.75,13,25,28,30,4.25,4,4.5,6,9.25,9.25,0,0,0,0,0);
 
 
 
@@ -130,15 +115,3 @@ CREATE TABLE `sportsims`.`lotteries` (
   PRIMARY KEY (`lotteryId`)
 )
 ENGINE = InnoDB;
-
-INSERT INTO lotteries (memberId,dateTime,selections,game1Id,game1Item,game1Spread,game1Odds,game2Id,game2Item,game2Spread,game2Odds,game3Id,game3Item,game3Spread,game3Odds,pass1,pass2,pass3,stake,price,status) VALUES("kent11240","2016-04-12 11:26:34",3,4,"away",-15.5,1.75,5,"away",2.5,1.75,6,"over",202.5,1.75,false,false,true,100,0,0);
-
-INSERT INTO lotteries (memberId,dateTime,selections,game1Id,game1Item,game1Spread,game1Odds,game2Id,game2Item,game2Spread,game2Odds,game3Id,game3Item,game3Spread,game3Odds,pass1,pass2,pass3,stake,price,status) VALUES("kent11240","2016-04-12 11:27:14",3,4,"home",-15.5,1.75,5,"away",2.5,1.75,6,"over",202.5,1.75,false,true,true,30,0,0);
-
-INSERT INTO lotteries (memberId,dateTime,selections,game1Id,game1Item,game1Spread,game1Odds,game2Id,game2Item,game2Spread,game2Odds,game3Id,game3Item,game3Spread,game3Odds,pass1,pass2,pass3,stake,price,status) VALUES("kent11240","2016-04-12 11:28:41",3,4,"home",-15.5,1.75,5,"away",2.5,1.75,6,"over",202.5,1.75,false,false,true,30,0,0);
-
-INSERT INTO lotteries (memberId,dateTime,selections,game1Id,game1Item,game1Spread,game1Odds,game2Id,game2Item,game2Spread,game2Odds,game3Id,game3Item,game3Spread,game3Odds,pass1,pass2,pass3,stake,price,status) VALUES("kent11240","2016-04-12 11:30:27",3,4,"home",-15.5,1.75,5,"home",2.5,1.75,6,"over",202.5,1.75,true,false,false,40,0,0);
-
-INSERT INTO lotteries (memberId,dateTime,selections,game1Id,game1Item,game1Spread,game1Odds,game2Id,game2Item,game2Spread,game2Odds,game3Id,game3Item,game3Spread,game3Odds,pass1,pass2,pass3,stake,price,status) VALUES("kent11240","2016-04-12 11:31:02",3,4,"away",-15.5,1.75,5,"away",2.5,1.75,7,"home",-6.5,1.75,false,false,true,100,0,0);
-
-INSERT INTO lotteries (memberId,dateTime,selections,game1Id,game1Item,game1Spread,game1Odds,game2Id,game2Item,game2Spread,game2Odds,game3Id,game3Item,game3Spread,game3Odds,pass1,pass2,pass3,stake,price,status) VALUES("kent11240","2016-04-12 11:38:58",3,4,"home11to15",NULL,4.25,5,"away6to10",NULL,4.25,7,"home6to10",NULL,4.25,false,false,true,100,0,0);

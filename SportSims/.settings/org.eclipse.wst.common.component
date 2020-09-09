@@ -2,6 +2,9 @@
     <wb-module deploy-name="SportSims">
         <wb-resource deploy-path="/" source-path="/web" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="SportSimsLibrary.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/SportSimsLibrary/SportSimsLibrary">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="SportSims"/>
         <property name="java-output-path" value="/SportSims/build/classes"/>
     </wb-module>

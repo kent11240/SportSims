@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <context-param>
+        <param-name>app-name</param-name>
+        <param-value>sportSims</param-value>
+    </context-param>
+    <context-param>
+        <param-name>charset</param-name>
+        <param-value>UTF-8</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>LoginImageCheckCodeServlet</servlet-name>
+        <servlet-class>uuu.sportsims.view.ImageCheckCodeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginImageCheckCodeServlet</servlet-name>
+        <url-pattern>/images/login_check_code.jpg</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RegisterImageCheckCodeServlet</servlet-name>
+        <servlet-class>uuu.sportsims.view.ImageCheckCodeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterImageCheckCodeServlet</servlet-name>
+        <url-pattern>/images/reg_check_code.jpg</url-pattern>
+    </servlet-mapping>
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/WEB-INF/error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/error_404.jsp</location>
+    </error-page>
+        <error-page>
+        <error-code>405</error-code>
+        <location>/WEB-INF/error_404.jsp</location>
+    </error-page>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

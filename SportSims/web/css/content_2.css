@@ -1,0 +1,151 @@
+.content{
+    width: 90%;
+    margin: 5%;
+    text-align: center;
+}
+.contentLeft,.contentRight{
+    margin: 10px;
+    display: inline-block;
+}
+.contentLeft{
+    width: 68%;
+    /*background-color: pink;*/
+    /*text-align: left;*/
+}
+.contentLeft div{
+    display: inline-block;
+    width: 100%;
+    margin: 10px;
+}
+.contentLeft div p{
+    margin: 8px;
+}
+.contentLeft span{
+    font-size: 1.5em;
+}
+
+.contentRight{
+    width: 27%;
+    vertical-align: top;
+}
+.contentRight div{
+    display: inline-block;
+    margin: 10px;
+    width: 90%;
+    padding: 5px;
+}
+.contentRight div:first-child{
+    width: 75%;
+}
+
+.contentRight fieldset span{
+    vertical-align: bottom;
+}
+
+.contentRight fieldset{
+    border: 2px solid #f3a218;
+    text-align: left;
+    line-height: 1.5em;
+}
+
+.contentRight legend{
+    padding: 5px 10px;
+    background-color: #f3a218;
+    color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.contentRight .memberState a{
+    text-decoration: none;
+    font-size: 1.2em;
+    text-align: right;
+}
+.contentRight .memberState a:link{
+    color:hsl(38,90%,45%);
+}
+.contentRight .memberState a:visited{
+    color:hsl(38,90%,45%);
+}
+.contentRight .memberState a:active{
+    color:hsl(38,90%,45%);
+}
+.contentRight .memberState a:hover{
+    color:hsl(38,90%,70%)
+}
+
+#send{
+    width: 40px;
+    cursor: pointer;
+    background-color: #f3a218;
+    padding: 5px;
+    text-align: right;
+    vertical-align: middle;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#money{
+    width: 20px;
+    vertical-align: text-bottom;
+}
+
+#info{
+    width: 14px;
+    vertical-align: central;
+}
+
+#clean{
+    margin: 5px 0px 0px 5px;
+    padding: 3px 5px;
+    background-color: #f3a218;
+    color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+#clean img{
+    width: 20px;
+    vertical-align: text-bottom;
+}
+
+#bet{
+    margin-top: 5px;
+    padding: 3px 5px;
+    background-color: #f3a218;
+    color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+#bet img{
+    width: 12px;
+    vertical-align: central;
+}
+
+#errorMsg{
+    color: red;
+    font-weight: bold;
+}
+.add{
+    width: 18px;
+    vertical-align: text-bottom;
+    cursor: pointer;
+}
+
+.content .error{
+    color: red;
+    display: table;
+    margin: 0px auto;
+}
+.content .error ul{
+    padding: 0px;
+    list-style-type: circle;
+}

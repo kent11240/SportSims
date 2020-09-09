@@ -1,0 +1,30 @@
+.contentLeft table{
+    width: 100%;
+    background-color: white;
+}
+.contentLeft caption{
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 5px 2px;
+    padding: 5px;
+    background-color: #f3a218;
+}
+.contentLeft th{
+    color: white;
+    padding: 5px;
+    background-color: #f3a218;
+}
+.contentLeft .gameList td{
+    text-align: right;
+}
+.contentLeft .detail td{
+    text-align: left;
+}
+.contentLeft td{
+    padding: 7px;
+}
+
+.teamName{
+    width: 120px;
+}

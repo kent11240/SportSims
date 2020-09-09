@@ -1,0 +1,26 @@
+.contentLeft table{
+    width: 100%;
+    background-color: white;
+}
+.contentLeft th{
+    color: white;
+    padding: 10px 0px;
+    background-color: #f3a218;
+}
+
+.contentLeft td a{
+    text-decoration: none;
+    font-weight: bold;
+}
+.contentLeft td a:link{
+    color:hsl(38,90%,45%);
+}
+.contentLeft td a:visited{
+    color:hsl(38,90%,45%);
+}
+.contentLeft td a:active{
+    color:hsl(38,90%,45%);
+}
+.contentLeft td a:hover{
+    color:hsl(38,90%,70%)
+}
